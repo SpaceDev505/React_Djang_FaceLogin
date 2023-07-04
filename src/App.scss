@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+#root {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-image: url(assets/galaxy-night-landscape.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.auth {
+  width: 100%;
+  max-height: 100vh;
+  .auth-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 48px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+      157.6deg,
+      rgba(255, 255, 255, 0.16) 14.59%,
+      rgba(255, 255, 255, 0.04) 85.41%
+    );
+    box-shadow: 0px 0px 8px #b81ffd ;
+    border-radius: 4px;
+    box-sizing: border-box;
+    .form-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+      .subtitle {
+        color: #de1b1b;
+      }
+      .link {
+        color: #E323FF;
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .form-control {
+        width: 395px;
+        height: 48px;
+        border-radius: 5px;
+        background-color: #0F0F13;
+        color: #ffffff;
+      }
+      .submit {
+        width: 395px;
+        height: 40px;
+        border-radius: 6px;
+        pad: 10px, 24px, 10px, 24px;
+        gap: 12px;
+        background-color: #5F37FB;
+        color: #ffffff;
+      }
+      .other{
+        .third-party-logins{
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          .social-login{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 20px 8px 24px;
+            gap: 8px;
+            width: 80px;
+            height: 22px;
+            border: 1px solid #70707c;
+            border-radius: 6px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600 !important;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.009em;
+          }
+        }
+      }
+    }
+  }
+}
