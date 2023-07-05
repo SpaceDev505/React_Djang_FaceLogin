@@ -7,8 +7,8 @@ const SignIn = () =>{
     const url = 'http://localhost:8000/login/'
     const submit =()=>{
         axios.post(url, {
-            title:"Hello world",
-            body:"this is update "
+            mail:email,
+            password:password
         })
         .then((response)=>{
             console.log(response.data)
