@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 
 from rest_framework.views import APIView
-
+from .models import LoginModel
 # Create your views here.
 # @csrf_exempt
 # def index(request):
@@ -16,7 +16,7 @@ from rest_framework.views import APIView
 #     if request.method == "POST":
 #         return HttpResponse('POST Request')
 
-from rest_framework.views import APIView
+# from rest_framework.views import APIView
 
 
 class SignInView(APIView):
@@ -24,6 +24,8 @@ class SignInView(APIView):
         return HttpResponse('This is GET request')
     def post(self, request):
         data = request.data
-        print(data)
-        # return HttpResponse('mail'+ )
-        # return HttpResponse("THis is is test of the request")
+        email = data['mail']
+        password = data['password']
+        usr = LoginModel(email = data['mail'], password = data['password'])
+        usr.save()
+        return HttpResponse('emial'+email, 'password'+password)
